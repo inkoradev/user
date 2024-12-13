@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="user-profile.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <h1>INKORA</h1>
+            <nav>
+                <ul>
+                    <li><a href="profile.html">Edit Profile</a></li>
+                    <li><a href="create-blog.html">Create Blog</a></li>
+                    <li><a href="explore.html">Explore</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="logout.php" class="logout-btn">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- User Profile Details -->
+    <main>
+        <section class="profile-section">
+            <h2>User Profile</h2>
+            <div class="profile-info">
+                <p><strong>Username:</strong> <span id="profile-username"></span></p>
+                <p><strong>Name:</strong> <span id="profile-name"></span></p>
+                <p><strong>Email:</strong> <span id="profile-email"></span></p>
+                <p><strong>Bio:</strong> <span id="profile-bio"></span></p>
+            </div>
+        </section>
+    </main>
+
+    <script src="user-profile.js"></script>
+</body>
+</html>

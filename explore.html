@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore - Blogging Site</title>
+    <link rel="stylesheet" href="explore.css">
+</head>
+<body>
+    <header>
+        <h1>Explore Blogs</h1>
+        <nav>
+            <ul>
+                <li><a href="newhome.html">Home</a></li>
+                <br>
+                <li><a href="profile.html">Profile</a></li>
+                <br>
+                <li><a href="create-blog.html">Create Blog</a></li>
+                <br>
+                <li><a href="logout.html" class="logout-btn">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="blog-list">
+            <h2>All Blogs</h2>
+            <!-- Blogs will be displayed here -->
+            <div class="blogs-container">
+                <!-- Example Blog Item -->
+                <div class="blog-item">
+                    <h3><a href="view-blog.php?id=1">Blog Title 1</a></h3>
+                    <p>Short excerpt from blog...</p>
+                    <button><a href="view-blog.php?id=1">Read More</a></button>
+                </div>
+                <!-- More Blog Items will be dynamically loaded -->
+            </div>
+        </section>
+    </main>
+    <br>
+    <br>
+    <br>
+    <br>
+    <footer>
+        <p>&copy; 2024 Blogging Site. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Your Dashboard</h1>
+    </header>
+    <main>
+        <div class="welcome-section">
+            <h2>Hello, <span id="username-display">User</span>!</h2>
+            <p>What would you like to do today?</p>
+        </div>
+        <div class="actions">
+            <a href="create-blog.html" class="button">Create a Blog</a>
+            <a href="all-blogs.html" class="button">View All Blogs</a>
+            <a href="profile.html" class="button">Manage Profile</a>
+            <a href="newhome.html" class="button">Back to Home</a>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Blogging Site. All Rights Reserved.</p>
+    </footer>
+    <script>
+        // Replace with the logged-in user's name
+        document.addEventListener("DOMContentLoaded", () => {
+            const username = "Juman Deep"; // Example username, replace with dynamic data
+            document.getElementById("username-display").textContent = username;
+        });
+    </script>
+
+    
+</body>
+</html>

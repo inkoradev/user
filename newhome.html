@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+
+    <!-- Link to Google Fonts for pixelated font -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Press Start 2P', cursive;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            font-size: 14px;
+        }
+
+        /* Main container */
+        .container {
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        header {
+            background-color: #1A73E8; /* Retro Facebook Blue */
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 2.5em;
+            text-transform: uppercase;
+            font-weight: bold;
+            border-bottom: 4px solid #0c5da5;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #e0e0e0;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: inline-block;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #1A73E8;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #f44336;
+        }
+
+        /* Profile Section */
+        .profile {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 30px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .profile img {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border: 4px solid #1A73E8;
+        }
+
+        .profile h2 {
+            margin: 10px 0;
+            font-size: 2em;
+            color: #1A73E8;
+        }
+
+        .profile p {
+            font-size: 1.2em;
+            margin: 5px 0;
+            color: #555;
+        }
+
+        /* Section Titles */
+        h3 {
+            font-size: 2em;
+            color: #1A73E8;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        /* About Me Section */
+        .about {
+            background-color: #fff;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .about p {
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        /* Skills Section */
+        .skills {
+            background-color: #fff;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .skills ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .skills ul li {
+            font-size: 1.2em;
+            margin: 5px 0;
+        }
+
+        /* Contact Section */
+        .contact {
+            background-color: #fff;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .contact p {
+            font-size: 1.2em;
+            margin: 5px 0;
+            color: #333;
+        }
+
+        .contact a {
+            color: #1A73E8;
+            text-decoration: none;
+        }
+
+        .contact a:hover {
+            color: #f44336;
+        }
+
+        /* Retro Border and Shadows */
+        .retro-border {
+            border: 2px solid #1A73E8;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #fff;
+        }
+        /* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    width: 100%;
+    padding: 10px 0;
+    margin-top: 40px;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1em;
+}
+
+/* Dark Mode Footer */
+body.dark-mode footer {
+    background-color: #222;
+}
+
+/* Dark Mode Text */
+body.dark-mode h1, body.dark-mode h2 {
+    color: #fff;
+}
+
+/* Dark Mode Link & Skills */
+body.dark-mode .skills li {
+    color: #ddd;
+}
+
+/* Mode Switch */
+.mode-switch {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 50px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    border-radius: 50px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(14px);
+}
+
+/* Animations */
+@keyframes slideIn {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+    </style>
+</head>
+<body>
+
+    <header>
+        INKORA
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="create-blog.html">Create Blog</a></li>
+            <li><a href="all-blogs.html">Explore</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="logout.html" class="logout-btn">Logout</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+
+        <!-- Profile Section -->
+        <div class="profile retro-border">
+            <img src="jeff davinci.jpeg" alt="Profile Picture">
+            <h2>Juman Deep</h2>
+            <p>Creative Coder | Blogger | Designer</p>
+            <p>Location: Assam, India</p>
+        </div>
+
+        <!-- About Me Section -->
+        <section class="about retro-border">
+            <h3>About Me</h3>
+            <p>Hello, I'm Juman! I'm passionate about coding, creating fun projects, and writing blogs. I love retro games and everything creative. My goal is to inspire others with my work and help them learn new things every day.</p>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills retro-border">
+            <h3>Skills</h3>
+            <ul>
+                <li>HTML, CSS, JavaScript</li>
+                <li>Python</li>
+                <li>Web Development</li>
+                <li>Content Creation</li>
+                <li>Graphic Designing</li>
+            </ul>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact retro-border">
+            <h3>Contact Me</h3>
+            <p>If you'd like to get in touch, feel free to send me an email or connect with me on social media.</p>
+            <p>Email: <a href="mailto:jane.doe@example.com">jane.doe@example.com</a></p>
+            <br>
+        </section>
+
+    </div>
+<br><br><br><br>
+        <!-- Footer Section -->
+        <footer>
+            <div class="footer-content">
+                <p>Created by <strong>Juman Deep Bharati</strong> | 2024</p>
+            </div>
+        </footer>
+</body>
+</html>

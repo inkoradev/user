@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Blog</title>
+    <link rel="stylesheet" href="create-blog.css">
+    <script src="https://apis.google.com/js/api.js"></script>
+</head>
+<body>
+    <div class="container-wrapper">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <ul>
+                <li><a href="newhome.html">Home</a></li>
+                <li><a href="create-blog.html" class="active">Create New Blog</a></li>
+                <li><a href="all-blogs.html">My Blogs</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content Area -->
+        <div class="container">
+            <div class="header">
+                <h1>Create Your Blog</h1>
+            </div>
+            <div class="blog-form">
+                <input type="text" id="title" placeholder="Blog Title" class="input-field" />
+                <textarea id="content" placeholder="Write your blog content here..." class="input-field"></textarea>
+                <button id="publish" class="submit-btn">Publish Blog</button>
+                <button id="save" class="save-btn">Save Post</button>
+            </div>
+            <div id="output" class="output"></div>
+        </div>
+    </div>
+
+    <script src="create-blog.js"></script>
+</body>
+</html>

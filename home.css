@@ -1,0 +1,151 @@
+/* Basic reset and layout */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header styling */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+/* Navigation bar styling */
+nav {
+    text-align: center; /* Center the nav items */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* This makes the list items appear horizontally */
+    justify-content: center; /* Center align the items horizontally */
+}
+
+nav ul li {
+    margin: 0 15px; /* Space between items */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #575757;
+}
+
+
+footer {
+    background-color: #3b5998;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 12px;
+}
+
+/* Home Page */
+.home {
+    padding: 20px;
+    margin-top: 80px;
+}
+
+.home h2 {
+    font-size: 22px;
+    color: #3b5998;
+}
+
+.home p {
+    font-size: 14px;
+    color: #333;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    float: left;
+    background-color: #f7f7f7;
+    padding: 20px;
+    margin-top: 80px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+}
+
+.sidebar ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.sidebar ul li a:hover {
+    color: #3b5998;
+}
+
+/* Content Section */
+.content {
+    margin-left: 270px;
+    padding: 20px;
+}
+
+footer a {
+    color: #777;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        font-size: 18px;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 10px;
+        margin-top: 60px;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+}
+.logout-btn {
+    color: rgb(250, 6, 6);
+    
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+
+

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INKORA Profile</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <h1>INKORA</h1>
+            <nav>
+                <ul>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="create-blog.html">Create Blog</a></li>
+                    <li><a href="explore.html">Explore</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="logout.html" class="logout-btn">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Profile Section -->
+    <main>
+        <section class="profile-section">
+            <div class="profile-info">
+                <h2>Profile Details</h2>
+                <form id="profile-form">
+                    <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email id" required>
+
+                    <label for="bio">Bio:</label>
+                    <textarea id="bio">I'm a passionate developer, always learning and creating. I love inkora :3 </textarea>
+
+                    <div class="profile-actions">
+                        <button type="button" id="edit-btn">Edit</button>
+                        <button type="button" id="save-btn" style="display:none;">Save</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script src="profile.js"></script>
+</body>
+</html>

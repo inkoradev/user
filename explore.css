@@ -1,0 +1,109 @@
+/* Explore Page Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #3b5998; /* Facebook blue */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-size: 2em;
+}
+
+nav {
+    background-color: #3b5998;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.blog-list {
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.blogs-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.blog-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 15px;
+    width: 30%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-align: left;
+}
+
+.blog-item h3 {
+    font-size: 1.5em;
+    color: #3b5998;
+}
+
+.blog-item p {
+    font-size: 14px;
+    color: #555;
+}
+
+.blog-item button {
+    background-color: #3b5998;
+    border: none;
+    color: white;
+    padding: 8px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.blog-item button a {
+    color: white;
+    text-decoration: none;
+}
+
+.blog-item button:hover {
+    background-color: #365899;
+}
+
+.logout-btn {
+    color: rgb(252, 3, 3);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #777;
+}
