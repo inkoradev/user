@@ -4,8 +4,134 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Blog</title>
-    <link rel="stylesheet" href="create-blog.css">
-    <script src="https://apis.google.com/js/api.js"></script>
+    <style>
+        /* Global Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            height: 100vh;
+        }
+
+        /* Container Wrapper (holds sidebar and content) */
+        .container-wrapper {
+            display: flex;
+            width: 100%;
+        }
+
+        /* Sidebar Styling */
+        .sidebar {
+            width: 250px;
+            background-color: #3b5998;
+            color: white;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin: 20px 0;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            display: block;
+        }
+
+        .sidebar ul li a:hover {
+            background-color: #2d4373;
+            padding-left: 10px;
+            transition: 0.3s;
+        }
+
+        .sidebar ul li a.active {
+            background-color: #2d4373;
+            padding-left: 10px;
+        }
+
+        /* Main Content Area */
+        .container {
+            flex-grow: 1;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        /* Blog Form */
+        .blog-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .input-field {
+            margin: 10px 0;
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .input-field:focus {
+            outline: none;
+            border-color: #3b5998;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 200px;
+        }
+
+        .submit-btn, .save-btn {
+            background-color: #3b5998;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        .submit-btn:hover, .save-btn:hover {
+            background-color: #2d4373;
+        }
+
+        /* Output */
+        .output {
+            margin-top: 20px;
+            background-color: #f7f7f7;
+            padding: 15px;
+            border-radius: 5px;
+            display: none;
+        }
+    </style>
 </head>
 <body>
     <div class="container-wrapper">
@@ -27,13 +153,44 @@
             <div class="blog-form">
                 <input type="text" id="title" placeholder="Blog Title" class="input-field" />
                 <textarea id="content" placeholder="Write your blog content here..." class="input-field"></textarea>
-                <!-- <button id="publish" class="submit-btn">Publish Blog</button> -->
                 <button id="save" class="save-btn">Save Post</button>
             </div>
-            <div id="output" class="output"></div>
         </div>
     </div>
 
-    <script src="create-blog.js"></script>
+    <script>
+        document.getElementById('save').addEventListener('click', function() {
+            // Get blog title and content
+            var title = document.getElementById('title').value;
+            var content = document.getElementById('content').value;
+
+            // Create the HTML content for the blog
+            var blogContent = `
+                <!DOCTYPE html>
+                <html lang="en">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>${title}</title>
+                </head>
+                <body>
+                    <h1>${title}</h1>
+                    <p>${content}</p>
+                </body>
+                </html>
+            `;
+
+            // Create a Blob from the blog content
+            var blob = new Blob([blogContent], { type: 'text/html' });
+
+            // Create an anchor element for downloading
+            var link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = title + '.html';  // The downloaded file will be named after the title
+
+            // Trigger the download
+            link.click();
+        });
+    </script>
 </body>
 </html>
